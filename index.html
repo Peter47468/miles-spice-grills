@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miles Spice & Grills</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#111;
+  color:#fff;
+}
+header{
+  background:linear-gradient(135deg,#171717,#3a2200);
+  padding:22px 18px;
+  text-align:center;
+  border-bottom:3px solid #ffd900;
+}
+.logo{
+  font-size:38px;
+  font-weight:900;
+  color:#ffd900;
+}
+.logo span{color:#fff}
+.tagline{
+  color:#ffdf00;
+  margin-top:5px;
+  font-weight:bold;
+}
+nav{
+  margin-top:18px;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin:0 8px;
+  font-weight:bold;
+}
+.hero{
+  padding:60px 20px;
+  text-align:center;
+  background:
+  linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),
+  linear-gradient(135deg,#5b2800,#171717);
+}
+.hero h1{
+  font-size:46px;
+  margin:0 0 12px;
+  color:#ffd900;
+}
+.hero p{
+  font-size:19px;
+  max-width:650px;
+  margin:10px auto 25px;
+  line-height:1.6;
+}
+.btn{
+  display:inline-block;
+  padding:14px 22px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+  margin:6px;
+}
+.yellow{
+  background:#ffd900;
+  color:#111;
+}
+.red{
+  background:#e71919;
+  color:#fff;
+}
+section{
+  padding:45px 18px;
+  max-width:1100px;
+  margin:auto;
+}
+.title{
+  text-align:center;
+  color:#ffd900;
+  font-size:32px;
+  margin-bottom:30px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.card{
+  background:#202020;
+  border:1px solid #444;
+  border-radius:14px;
+  overflow:hidden;
+  padding:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+.food{
+  height:150px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:55px;
+  background:linear-gradient(135deg,#4b2400,#151515);
+}
+.card h3{
+  color:#ffd900;
+  margin-bottom:8px;
+}
+.price{
+  font-size:20px;
+  font-weight:bold;
+  margin:12px 0;
+}
+.card button{
+  width:100%;
+  border:0;
+  padding:12px;
+  border-radius:7px;
+  background:#ffd900;
+  font-weight:bold;
+  cursor:pointer;
+}
+.package{
+  border:2px solid #ffd900;
+  background:#1b1b1b;
+  border-radius:14px;
+  padding:25px;
+}
+.package h3{
+  color:#ffd900;
+  font-size:25px;
+}
+.package ul{
+  line-height:2;
+  padding-left:20px;
+}
+.order{
+  background:#171717;
+  border-top:2px solid #ffd900;
+  border-bottom:2px solid #ffd900;
+}
+form{
+  max-width:650px;
+  margin:auto;
+}
+input,select,textarea{
+  width:100%;
+  padding:14px;
+  margin:8px 0 15px;
+  border-radius:7px;
+  border:1px solid #555;
+  background:#292929;
+  color:#fff;
+}
+textarea{min-height:110px}
+.submit{
+  width:100%;
+  padding:15px;
+  background:#25d366;
+  color:#fff;
+  border:0;
+  border-radius:8px;
+  font-size:17px;
+  font-weight:bold;
+}
+.contact{
+  text-align:center;
+}
+footer{
+  text-align:center;
+  padding:25px;
+  background:#080808;
+  color:#bbb;
+}
+.highlight{color:#ffd900}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🔥 MILES <span>SPICE & GRILLS</span></div>
+  <div class="tagline">Tasty Pastries • Great Vibes • Team Spirit</div>
+
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#packages">Packages</a>
+    <a href="#order">Order</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Great Food. Great Vibes.</h1>
+  <p>
+    Welcome to Miles Spice & Grills — delicious chops, pastries,
+    grills and refreshing treats prepared for you.
+  </p>
+
+  <a class="btn yellow" href="#menu">ORDER FOOD</a>
+  <a class="btn red" href="#packages">VIEW PACKAGES</a>
+</div>
+
+<section id="menu">
+  <h2 class="title">Our Menu</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="food">🍗</div>
+      <h3>Grilled Chicken</h3>
+      <p>Juicy, spicy and freshly grilled.</p>
+      <div class="price">₦8,000</div>
+      <button onclick="addOrder('Grilled Chicken')">Order Now</button>
+    </div>
+
+    <div class="card">
+      <div class="food">🍢</div>
+      <h3>Chicken Chops</h3>
+      <p>Perfectly seasoned chops for every occasion.</p>
+      <div class="price">₦5,000</div>
+      <button onclick="addOrder('Chicken Chops')">Order Now</button>
+    </div>
+
+    <div class="card">
+      <div class="food">🥐</div>
+      <h3>Tasty Pastries</h3>
+      <p>Fresh pastries made for your cravings.</p>
+      <div class="price">From ₦2,000</div>
+      <button onclick="addOrder('Tasty Pastries')">Order Now</button>
+    </div>
+
+    <div class="card">
+      <div class="food">☕</div>
+      <h3>Arabian Tea</h3>
+      <p>Enjoy our special Arabian tea experience.</p>
+      <div class="price">₦2,500</div>
+      <button onclick="addOrder('Arabian Tea')">Order Now</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="packages">
+  <h2 class="title">Food Packages</h2>
+
+  <div class="grid">
+
+    <div class="package">
+      <h3>Family Package</h3>
+      <ul>
+        <li>Grilled chicken</li>
+        <li>Chicken chops</li>
+        <li>Pastries</li>
+        <li>Drinks</li>
+      </ul>
+      <a class="btn yellow" href="#order">Order Package</a>
+    </div>
+
+    <div class="package">
+      <h3>Party Package</h3>
+      <ul>
+        <li>Assorted chops</li>
+        <li>Grilled meat</li>
+        <li>Pastries</li>
+        <li>Drinks</li>
+      </ul>
+      <a class="btn yellow" href="#order">Order Package</a>
+    </div>
+
+    <div class="package">
+      <h3>Custom Package</h3>
+      <ul>
+        <li>Choose your meals</li>
+        <li>Choose quantity</li>
+        <li>Delivery available</li>
+        <li>Perfect for events</li>
+      </ul>
+      <a class="btn yellow" href="#order">Request Package</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="order" class="order">
+  <h2 class="title">Place Your Order</h2>
+
+  <form onsubmit="sendOrder(event)">
+
+    <label>Your Name</label>
+    <input id="name" type="text" placeholder="Enter your name" required>
+
+    <label>Phone Number</label>
+    <input id="phone" type="tel" placeholder="Your phone number" required>
+
+    <label>What would you like?</label>
+    <select id="food">
+      <option>Grilled Chicken</option>
+      <option>Chicken Chops</option>
+      <option>Tasty Pastries</option>
+      <option>Arabian Tea</option>
+      <option>Family Package</option>
+      <option>Party Package</option>
+      <option>Custom Package</option>
+    </select>
+
+    <label>Delivery Address</label>
+    <textarea id="address" placeholder="Enter your delivery address" required></textarea>
+
+    <label>Additional instructions</label>
+    <textarea id="notes" placeholder="Quantity, special request, etc."></textarea>
+
+    <button class="submit" type="submit">
+      📱 ORDER VIA WHATSAPP
+    </button>
+
+  </form>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="title">Visit Miles Spice & Grills</h2>
+
+  <p>📍 <span class="highlight">Kubwa Village</span></p>
+  <p>📞 0916 326 5240</p>
+  <p>📧 Emmymilesgloballtd@yahoo.com</p>
+
+  <a class="btn yellow"
+     href="https://wa.me/2349163265240"
+     target="_blank">
+     Chat With Us on WhatsApp
+  </a>
+</section>
+
+<footer>
+  <p>© 2026 Miles Spice & Grills. All Rights Reserved.</p>
+  <p>Tasty Pastries • Great Vibes • Team Spirit</p>
+</footer>
+
+<script>
+function addOrder(item){
+  document.getElementById("food").value = item;
+  document.getElementById("order").scrollIntoView({behavior:"smooth"});
+}
+
+function sendOrder(event){
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const food = document.getElementById("food").value;
+  const address = document.getElementById("address").value;
+  const notes = document.getElementById("notes").value;
+
+  const message =
+    "Hello Miles Spice & Grills!%0A%0A" +
+    "I would like to place an order.%0A%0A" +
+    "Name: " + encodeURIComponent(name) + "%0A" +
+    "Phone: " + encodeURIComponent(phone) + "%0A" +
+    "Order: " + encodeURIComponent(food) + "%0A" +
+    "Delivery Address: " + encodeURIComponent(address) + "%0A" +
+    "Additional Request: " + encodeURIComponent(notes);
+
+  window.open(
+    "https://wa.me/2349163265240?text=" + message,
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>
